@@ -5,12 +5,12 @@ namespace Insights.Gateway.Services
 {
     public class AdInsightsService(IAdInsightsRepository repository) : IAdInsightsService
     {
-        public async Task<int> GetClicksAsync(string campaignID)
+        public async Task<long> GetClicksAsync(string campaignID)
         {
             return await repository.GetClicksAsync(campaignID);
         }
 
-        public async Task<int> GetImpressionsAsync(string campaignID)
+        public async Task<long> GetImpressionsAsync(string campaignID)
         {
             return await repository.GetImpressionsAsync(campaignID);
         }

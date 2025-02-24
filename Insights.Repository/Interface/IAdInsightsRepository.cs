@@ -2,7 +2,7 @@ namespace Insights.Repository.Interface;
 
 public interface IAdInsightsRepository
 {
-    Task<int> GetClicksAsync(string campaignID);
-    Task<int> GetImpressionsAsync(string campaignID);
+    Task<long> GetClicksAsync(string campaignID);
+    Task<long> GetImpressionsAsync(string campaignID);
     Task<int> GetClickToBasketAsync(string campaignID);
 }
